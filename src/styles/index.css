@@ -1,11 +1,84 @@
-/* 
+body{
+    background-color: #000;
+}
+div.container {
+    background-color: black;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+div .casilla {
+    border-radius: 5px;
+    background-color: rgb(19, 19, 19);
+    border: 1px solid rgb(46, 43, 43);
+    padding: 20px;
+    width: 60px;
+    font-size: 2rem;
+    color: white;
+}
 
-*/
+div .reloj {
+    border-radius: 5px;
+    background-color: rgb(19, 19, 19);
+    border: 1px solid rgb(46, 43, 43);
+    padding: 20px;
+    width: 80px;
+    font-size: 2rem;
+    color: white;
+    align-items: center;
+
+}
+
+.btn {
+    position: relative;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: ghostwhite;
+    overflow: hidden;
+}
+
+.btn svg {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.5em;
+}
+
+.btn span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+.btn::before,
+.btn::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.btn::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.btn:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
